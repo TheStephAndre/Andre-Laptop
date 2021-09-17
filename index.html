@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Andre's Laptop</title>
+  </head>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <div class="nav-logo">
+        <img src="./img/logo.svg" alt="" />
+        <h1>Andre Media</h1>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#">Specs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <img src="./img/cart.svg" alt="" />
+    </div>
+  </nav>
+  <body>
+    <!-- Main section -->
+    <section class="main-container">
+      <div class="main-text">
+        <h1>Laptop of the millenium</h1>
+        <p>
+          The new 14-inch frameless display offer a 4K display with a
+          touchscreen.
+        </p>
+        <div class="call-to-action">
+          <button class="btn-select">14 inch</button>
+          <button class="btn-cart">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="main-image">
+        <div class="main-image-container">
+          <img src="./img/matebook.png" alt="The image of the laptop" />
+          <div class="slide-icon">
+            <img src="./img/arrow-left.svg" alt="an icon arrow to the left" />
+            <img src="./img/dot.svg" alt="" />
+            <img src="./img/dot-full.svg" alt="" />
+            <img src="./img/dot-full.svg" alt="" />
+            <img src="./img/arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-container">
+        <p class="footer-text">
+          Copyright &copy; 2021 Andre Media. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      /* Function to open the mobile menu */
+      const hamburgerMenu = document.querySelector(".hamburger-menu");
+      const navList = document.querySelector(".nav-list");
+
+      hamburgerMenu.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburgerMenu.classList.toggle("active");
+        navList.classList.toggle("active");
+      }
+
+      /* Function to close the mobile menu when you click on a link */
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburgerMenu.classList.remove("active");
+        navList.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
